@@ -51,6 +51,40 @@
             font-size: 14px;
             color: #e65100;
         }
+        .form-group {
+            margin: 20px 0;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: #2196f3;
+        }
+        .form-group button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #2196f3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #1976d2;
+        }
     </style>
 </head>
 <body>
@@ -60,6 +94,14 @@
         <div class="hint">
             <strong>Welcome!</strong> This application lets you view information about our dogs.
         </div>
+
+        <form method="GET" action="">
+            <div class="form-group">
+                <label for="id">ID:</label>
+                <input type="text" id="id" name="id" value="<?php echo isset($_GET['id']) ? htmlspecialchars($_GET['id']) : '1'; ?>" placeholder="Enter dog ID">
+                <button type="submit">View Dog</button>
+            </div>
+        </form>
 
         <?php
         $host = 'db';
