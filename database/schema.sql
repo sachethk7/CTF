@@ -2,23 +2,23 @@ DROP DATABASE IF EXISTS ctf_challenge;
 CREATE DATABASE ctf_challenge;
 USE ctf_challenge;
 
-CREATE TABLE dogs (
+CREATE TABLE citizens (
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100),
-    breed VARCHAR(100),
-    color VARCHAR(50),
-    owner VARCHAR(100)
+    sector VARCHAR(100),
+    status VARCHAR(50),
+    compliance VARCHAR(100)
 );
 
-INSERT INTO dogs (name, breed, color, owner) VALUES
-('Buddy', 'Golden Retriever', 'Golden', 'John Smith'),
-('Max', 'German Shepherd', 'Black and Tan', 'Jane Doe'),
-('Bella', 'Labrador', 'Chocolate', 'Bob Johnson'),
-('Charlie', 'Beagle', 'Tri-color', 'Alice Brown'),
-('Rocky', 'Bulldog', 'White', 'David Wilson');
+INSERT INTO citizens (name, sector, status, compliance) VALUES
+('Marcus Webb', 'Industrial-7G', 'MONITORED', '97.3%'),
+('Elena Cross', 'Residential-4A', 'CLEARED', '99.1%'),
+('David Chen', 'Commercial-2B', 'FLAGGED', '78.5%'),
+('Sarah Mitchell', 'Downtown-1C', 'MONITORED', '94.8%'),
+('James Norton', 'Outskirts-9F', 'RESTRICTED', '62.1%');
 
-CREATE TABLE w0w_y0u_f0und_m3 (
-    f0und_m3 VARCHAR(255)
+CREATE TABLE th3_0rd3r_0f_ch40s (
+    m0r14rtys_s3cr3t VARCHAR(255)
 );
 
-INSERT INTO w0w_y0u_f0und_m3 (f0und_m3) VALUES ('abctf{uni0n_1s_4_gr34t_c0mm4nd}');
+INSERT INTO th3_0rd3r_0f_ch40s (m0r14rtys_s3cr3t) VALUES ('IET{fr33_w1ll_f@1l3d_v@l1d@t10n}');
